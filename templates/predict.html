@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card shadow-lg p-4 rounded-4">
+  <h2 class="mb-4 text-center">Predict Employee Productivity</h2>
+
+  <form method="POST" action="/submit">
+    <div class="row g-3">
+
+      <!-- Quarter -->
+      <div class="col-md-6">
+        <label class="form-label">Quarter</label>
+        <select class="form-select" name="quarter" required>
+          <option value="">Choose...</option>
+          <option value="Quarter1">Quarter 1</option>
+          <option value="Quarter2">Quarter 2</option>
+          <option value="Quarter3">Quarter 3</option>
+          <option value="Quarter4">Quarter 4</option>
+        </select>
+      </div>
+
+      <!-- Department -->
+      <div class="col-md-6">
+        <label class="form-label">Department</label>
+        <select class="form-select" name="department" required>
+          <option value="">Choose...</option>
+          <option value="sewing">Sewing</option>
+          <option value="finishing">Finishing</option>
+        </select>
+      </div>
+
+      <!-- Day -->
+      <div class="col-md-6">
+        <label class="form-label">Day</label>
+        <select class="form-select" name="day" required>
+          <option value="">Choose...</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+      </div>
+
+      <!-- Team -->
+      <div class="col-md-6">
+        <label class="form-label">Team</label>
+        <input type="number" class="form-control" name="team" placeholder="e.g., 8" required>
+      </div>
+
+      <!-- Targeted Productivity -->
+      <div class="col-md-6">
+        <label class="form-label">Targeted Productivity</label>
+        <input type="number" step="0.01" class="form-control" name="targeted_productivity" placeholder="e.g., 0.8" required>
+      </div>
+
+      <!-- SMV -->
+      <div class="col-md-6">
+        <label class="form-label">SMV (Standard Minute Value)</label>
+        <input type="number" step="0.1" class="form-control" name="smv" placeholder="e.g., 25.5" required>
+      </div>
+
+      <!-- WIP -->
+      <div class="col-md-6">
+        <label class="form-label">WIP (Work in Progress)</label>
+        <input type="number" class="form-control" name="wip" placeholder="e.g., 110" required>
+      </div>
+
+      <!-- Overtime -->
+      <div class="col-md-6">
+        <label class="form-label">Overtime (minutes)</label>
+        <input type="number" class="form-control" name="over_time" placeholder="e.g., 3000" required>
+      </div>
+
+      <!-- Incentive -->
+      <div class="col-md-6">
+        <label class="form-label">Incentive</label>
+        <input type="number" class="form-control" name="incentive" placeholder="e.g., 0" required>
+      </div>
+
+      <!-- Idle Time -->
+      <div class="col-md-6">
+        <label class="form-label">Idle Time (minutes)</label>
+        <input type="number" class="form-control" name="idle_time" placeholder="e.g., 60" required>
+      </div>
+
+      <!-- Idle Men -->
+      <div class="col-md-6">
+        <label class="form-label">Idle Men</label>
+        <input type="number" class="form-control" name="idle_men" placeholder="e.g., 6" required>
+      </div>
+
+      <!-- Style Changes -->
+      <div class="col-md-6">
+        <label class="form-label">No. of Style Changes</label>
+        <input type="number" class="form-control" name="no_of_style_change" placeholder="e.g., 1" required>
+      </div>
+
+      <!-- No of Workers -->
+      <div class="col-md-6">
+        <label class="form-label">Number of Workers</label>
+        <input type="number" class="form-control" name="no_of_workers" placeholder="e.g., 45" required>
+      </div>
+
+      <!-- Month -->
+      <div class="col-md-6">
+        <label class="form-label">Month</label>
+        <input type="number" min="1" max="12" class="form-control" name="month" placeholder="1-12" required>
+      </div>
+
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary btn-lg px-5">🚀 Predict</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

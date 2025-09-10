@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card shadow-lg p-4 rounded-4">
+  <h2 class="mb-4 text-center">About This Project</h2>
+
+  <p class="lead">
+    The <strong>Employee Performance Predictor</strong> is a machine learning application 
+    designed to estimate the productivity of garment workers. By analyzing 
+    multiple workplace and operational factors, the model provides insights 
+    into expected performance levels.
+  </p>
+
+  <hr class="my-4">
+
+  <h4>📊 Dataset</h4>
+  <p>
+    The model is trained on the <em>Garment Worker Productivity</em> dataset, which contains 
+    details such as:
+  </p>
+  <ul>
+    <li>Quarter, Day, Department</li>
+    <li>Number of workers and overtime</li>
+    <li>Incentives, idle time, idle men</li>
+    <li>Work in progress (WIP), SMV (Standard Minute Value)</li>
+    <li>Actual productivity (target variable)</li>
+  </ul>
+
+  <h4>🤖 Model</h4>
+  <p>
+    We experimented with multiple regression models including:
+  </p>
+  <ul>
+    <li>Linear Regression</li>
+    <li>Random Forest Regressor</li>
+    <li>XGBoost Regressor</li>
+  </ul>
+  <p>
+    The final model was chosen based on performance metrics such as 
+    <code>MAE</code>, <code>RMSE</code>, and <code>R² score</code>.
+  </p>
+
+  <h4>🎯 Purpose</h4>
+  <p>
+    This tool can help factory managers and analysts understand productivity trends 
+    and make informed decisions to improve efficiency and employee well-being.
+  </p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center py-5">
+  <h1 class="display-4 fw-bold mb-4">Welcome to Employee Performance Predictor</h1>
+  <p class="lead mb-5">
+    This application uses machine learning to predict worker's productivity 
+    based on key factors like department, team size, incentives, and work conditions.
+  </p>
+  <a href="/predict" class="btn btn-primary btn-lg px-5 py-3 shadow">
+    🚀 Start Prediction
+  </a>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3 h-100">
+      <h5 class="card-title">📊 Data Driven</h5>
+      <p class="card-text">Built on real garment worker productivity data to ensure meaningful insights.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3 h-100">
+      <h5 class="card-title">🤖 Machine Learning</h5>
+      <p class="card-text">Our model uses regression algorithms like Random Forest and XGBoost for accurate predictions.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3 h-100">
+      <h5 class="card-title">🎯 Easy to Use</h5>
+      <p class="card-text">Just enter a few details and instantly get productivity predictions.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

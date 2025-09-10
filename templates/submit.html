@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="text-center">Prediction Result</h2>
+    <p class="text-center text-primary fs-4">
+        Predicted Productivity: {{ prediction }}
+    </p>
+
+    {% if prediction >= 0.75 %}
+        <div class="alert alert-success text-center mt-3">
+            🌟 Excellent performance expected!
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center mt-3">
+            ⚠️ Performance may need improvement.
+        </div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{{ url_for('predict') }}" class="btn btn-secondary">🔄 Make Another Prediction</a>
+        <a href="{{ url_for('home') }}" class="btn btn-primary">🏠 Back to Home</a>
+    </div>
+</div>
+{% endblock %}
